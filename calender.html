@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+  <body>
+    <div id="mycalender" onload="showdate()"></div>
+    
+    <script>
+        function showdate() {
+  var date = new Date()
+  var d = date.getDay()
+  var m = date.getMonth()
+  var y = date.getFullYear()
+  var nextto = "th"
+  
+  if(d==1){
+    var nextto = "st"
+  }
+  if(d==2){
+    var nextto = "nd"
+  }
+  if(d==3){
+    var nextto = "rd"
+  }
+  if(d>3){
+    var nextto = "th"
+  }
+
+  d= (d<10)?"0"+d:d
+  m= (m<10)?"0"+m:m
+  y= (y<10)?"0"+y:y
+  var time = d + nextto + " " + m + " " + y 
+  document.getElementById("mycalender").innerHTML= time
+  setTimeout(showdate,1000)
+}
+showdate()
+
+    </script>
+  </body>
+</html>

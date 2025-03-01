@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<haed><title>Form</title></haed>
+<body>
+    <p id="this"></p>
+ Age: <input id="id1" type="number" min="18" required><br>
+<button onclick="myfunction()">Submit</button>
+
+<script>
+    function myfunction(){
+        var age = document.getElementById("id1")
+        if(!age.checkValidity()){
+            document.getElementById("this").innerHTML = age.validationMessage
+        }
+    else{
+        document.getElementById("this").innerHTML =" good :)"
+    }
+    }
+</script>
+</body>
+
+</html>

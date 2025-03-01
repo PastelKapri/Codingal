@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Counter</title>
+</head>
+<body>
+    <div>
+        <p id="counter">0</p>
+        <button id="button_increase">Increase</button>
+        <button id="button_decrease">Decrease</button>
+        <button id="button_reset">Reset</button>
+    </div>
+    <script>
+        window.onload = function() {
+            var counter = document.getElementById("counter");
+            var buttonUp = document.getElementById("button_increase");
+            var buttonDown = document.getElementById("button_decrease");
+            var buttonReset = document.getElementById("button_reset");
+
+            var count = 0;
+
+            buttonUp.onclick = function() {
+                count++;
+                counter.textContent = count;
+            };
+
+            buttonDown.onclick = function() {
+                count--;
+                counter.textContent = count;
+            };
+
+            buttonReset.onclick = function() {
+                count = 0;
+                counter.textContent = count;
+            };
+        };
+    </script>
+</body>
+</html>
