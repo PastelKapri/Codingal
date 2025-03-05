@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>background Click Changer</title>
+    <style>
+        p {
+            text-align: center;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: large;
+        }
+        #bgchange {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: white;
+            user-select: none; 
+            transition: background-color 1s ease-in-out;
+        }
+    </style>
+</head>
+<body>
+    <div id="bgchange" onclick="startBackgroundChange()" ondblclick="stopBackgroundChange()">
+        <p>Click the screen <b>twice</b> to stop changing the background. <br>Click the screen <b>once</b> to start changing the background.</p>
+    </div>
+
+    <script>
+        var bgcolors = ["lightcoral", "orange", "lemonchiffon", "lime", "teal", "purple"];
+        var interval = null;
+
+        function changeBackground() {
+            var colorIndex = Math.floor(Math.random() * bgcolors.length);
+            document.getElementById("bgchange").style.backgroundColor = bgcolors[colorIndex];
+        }
+
+        function startBackgroundChange() {
+            if (!interval) {
+                interval = setInterval(changeBackground, 1000);
+            }
+        }
+
+        function stopBackgroundChange() {
+            if (interval) {
+                clearInterval(interval);
+                interval = null;
+            }
+        }
+    </script>
+</body>
+</html>
