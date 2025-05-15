@@ -14,5 +14,4 @@ print("length of h is", length)
 print(h[1:-1])
 w = "world"
 print(h + w)
-
-
+print(w.upper())
