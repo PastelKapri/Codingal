@@ -9,6 +9,6 @@ def func1(n):
 def func2(n):
     if(n <= 1):
         return
-    print("prints2")
+    print("printsr2")
     func2(n-1)
 

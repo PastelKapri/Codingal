@@ -18,7 +18,7 @@ if converter == 'b':
     print(f"The binary value of {dec} is {dec_to_bi(dec)}")
 
 elif converter == 'd':
-    bi = input("Enter a binary number: ")
+    bi = input("Enter a binaary number: ")
     print(f"The decimal value of {bi} is {bi_to_dec(bi)}")
 
 else:
