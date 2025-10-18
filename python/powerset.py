@@ -1,4 +1,4 @@
-'''def flips(num1,num2):
+def flips(num1,num2):
     flip = 0
     while(num1>0 or num2>0):
         t1=num1&1
@@ -10,7 +10,7 @@
     return flip
 num1 = int(input("Enter first number: "))
 num2 = int(input("Enter second number: "))
-print(f"Number of bits to be flipped to convert {num1} to {num2} is {flips(num1,num2)}")'''
+print(f"Number of bits to be flipped to convert {num1} to {num2} is {flips(num1,num2)}")
 
 import math
 def printpowersets(set,setsize):
