@@ -29,4 +29,4 @@ SELECT * FROM yummers WHERE neighborhood = 'Downtown' OR price <= 20.00;
 SELECT * FROM yummers ORDER BY rating DESC;
 
 SELECT * FROM yummers WHERE name LIKE '%C%';
-SELECT * FROM yummers WHERE neighborhood in('Downtown','Uptown');
+SELECT * FROM yummers WHERE neighborhood in('Downtown','Uptown');       
